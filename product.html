@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Товар — Bootstrap Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Bootstrap Shop</a>
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false"
+        aria-label="Открыть меню">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="product.html">Товар</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Дополнительно
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
+              <li><a class="dropdown-item" href="order.html">Оставить заявку</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5 flex-grow-1">
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
+        <li class="breadcrumb-item active" aria-current="page" id="crumb-name">
+          iPhone 16
+        </li>
+      </ol>
+    </nav>
+
+    <div class="row g-4">
+
+      <div class="col-12 col-lg-6">
+        <div class="card shadow-sm">
+          <div class="placeholder-image bg-light border rounded d-flex align-items-center justify-content-center">
+            <span class="text-muted" id="product-image-placeholder">
+              Изображение iPhone 16
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6">
+        <span class="badge bg-success mb-3" id="product-badge">
+          Новинка
+        </span>
+
+        <h1 class="h2" id="product-name">iPhone 16</h1>
+
+        <p class="lead text-muted" id="product-description">
+          Смартфон Apple с современной камерой и удобным интерфейсом.
+        </p>
+
+        <p class="fs-3 fw-bold" id="product-price">89 990 ₽</p>
+
+        <div class="d-flex gap-2 flex-wrap mb-4">
+          <a class="btn btn-primary btn-lg"
+            id="product-order-link" href="order.html?product=iphone16">
+            Оформить заявку
+          </a>
+
+          <a class="btn btn-outline-secondary btn-lg" href="catalog.html">
+            Назад в каталог
+          </a>
+        </div>
+
+        <div class="alert alert-warning" role="alert">
+          Это учебная карточка товара. Данные используются
+          для демонстрации Bootstrap-компонентов.
+        </div>
+      </div>
+
+    </div>
+
+    <section class="mt-5">
+      <h2 class="h4 mb-3">Характеристики</h2>
+
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered align-middle">
+          <tbody>
+            <tr>
+              <th scope="row">Категория</th>
+              <td id="product-category">Смартфон</td>
+            </tr>
+            <tr>
+              <th scope="row">Цена</th>
+              <td id="product-table-price">89 990 ₽</td>
+            </tr>
+            <tr>
+              <th scope="row">Наличие</th>
+              <td>В наличии</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-5">
+      <h2 class="h4 mb-3">Частые вопросы</h2>
+
+      <div class="accordion" id="faqAccordion">
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button" type="button"
+              data-bs-toggle="collapse" data-bs-target="#faqOne"
+              aria-expanded="true" aria-controls="faqOne">
+              Можно ли оформить заявку без регистрации?
+            </button>
+          </h3>
+
+          <div class="accordion-collapse collapse show"
+            id="faqOne" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Да, в учебном проекте заявка оформляется без регистрации.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#faqTwo"
+              aria-expanded="false" aria-controls="faqTwo">
+              Где используется Bootstrap?
+            </button>
+          </h3>
+
+          <div class="accordion-collapse collapse"
+            id="faqTwo" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Для сетки, навигации, карточек, форм, таблиц и сообщений.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white py-4 mt-auto">
+    <div class="container d-flex flex-wrap justify-content-between gap-2">
+      <span>© 2026 Bootstrap Shop. Учебный проект.</span>
+      <a href="catalog.html" class="text-white">Каталог</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const productData = {
+      iphone16: {
+        name: "iPhone 16",
+        price: "89 990 ₽",
+        category: "Смартфон",
+        badge: "Новинка",
+        description: "Смартфон Apple с современной камерой и удобным интерфейсом."
+      },
+
+      "ipad-air-m3": {
+        name: "iPad Air 11″ M3",
+        price: "74 990 ₽",
+        category: "Планшет",
+        badge: "Хит",
+        description: "Планшет для учёбы, творчества и повседневных задач."
+      },
+
+      "macbook-air-m4": {
+        name: "MacBook Air 13″ M4",
+        price: "119 990 ₽",
+        category: "Ноутбук",
+        badge: "Популярное",
+        description: "Лёгкий ноутбук для работы, программирования и учёбы."
+      }
+    };
+
+    const id = new URLSearchParams(window.location.search).get("id") || "iphone16";
+    const item = productData[id] || productData.iphone16;
+
+    document.getElementById("crumb-name").textContent = item.name;
+    document.getElementById("product-name").textContent = item.name;
+    document.getElementById("product-description").textContent = item.description;
+    document.getElementById("product-price").textContent = item.price;
+    document.getElementById("product-table-price").textContent = item.price;
+    document.getElementById("product-category").textContent = item.category;
+    document.getElementById("product-badge").textContent = item.badge;
+
+    document.getElementById("product-image-placeholder").textContent =
+      "Изображение: " + item.name;
+
+    document.getElementById("product-order-link").href =
+      "order.html?product=" + encodeURIComponent(id);
+  </script>
+</body>
+</html>
